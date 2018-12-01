@@ -37,6 +37,11 @@
 
 ---
 
+
+# Daten runterladen - Fork und Clone
+
+---
+
 ### Fork und Clone
 
 
@@ -139,6 +144,9 @@ and the repository exists.
 
 ---
 
+# Daten speichern - Add und Commit 
+
+---
 ### Commit
 
 @box[bg-blue text-black rounded](Commit#"A commit is the Git equivalent of a "save".[...] Git committing is an operation that acts upon a collection of files and directories." ([Source](https://www.atlassian.com/git/tutorials/saving-changes))
@@ -146,6 +154,12 @@ and the repository exists.
 --> Commit = Ein "Speicherpunkt" in Git. 
 
 --- 
+
+### Commit history
+
+![Git commits](images/gitkraken_commits.png)
+
+---
 
 ### Go back in time! 
 
@@ -178,7 +192,6 @@ and the repository exists.
 ---
 
 ### Adding und Staging Area 
-
 
 ![Staging Area](images/staging.png)
 
@@ -214,7 +227,12 @@ Grace + Mona
 
 --- 
 
-### Alles auf meinem Computer - aber was ist mit Tim?
+# Daten syncen - Push und Pull
+
+---
+
+
+### Git  Hosting
 
 - Die Cloud! z.B.
 
@@ -230,9 +248,7 @@ Grace + Mona
 **Lokal**: dein PC
 **Remote**: in der Cloud (GitHub, GitLab, ...)
 
-![Gitkraken Origin Master](images/gitkraken_origin_lokal.png)
-
-![Gitkraken Lokal Remote](images/gikraken_remote_lokal.png)
+![Gitkraken Lokal Remote](images/gitkraken_remote_lokal.png)
 
 ---
 
@@ -241,6 +257,10 @@ Grace + Mona
 
 - Git Pull: neue Commits von GitHub downloaden
 - Git Push: lokal erstellte Commits nach GitHub hochladen
+
+---
+
+### Sync: Git Pull und Git Push
 
 ![Push Pull](images/push_pull.png)
 
@@ -277,18 +297,170 @@ Grace + Mona
 
 ---
 
-pictures of error slides
+# When things go wrong...
 
+---
+
+![git google](images/giterrors.png)
 
 ---
 
 ![xccd](images/xkcd_comic.png)
 
----
-
-
 
 ---
 
+### When things go wrong...
+
+@ol
+
+- so lange nichts gepusht ist, alles (halbwegs) gut
+    - oft committen!
+- zur Not: Codestand sichern und neu clonen 
+
+@olend 
 
 
+--- 
+
+### Git stash
+
+@box[bg-blue text-black rounded](Stash#"git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on. Stashing is handy if you need to quickly switch context and work on something else, but you're mid-way through a code change and aren't quite ready to commit". ([Source](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)))
+
+---
+
+### Git stash
+
+![stash](https://media.giphy.com/media/l0HlxJfVUKhtR8Jna/giphy.gif)
+
+--> put it away for now!
+
+---
+
+### Git stash bei merge conflicts
+
+@ol
+
+- git stash
+- git pull
+- apply stash 
+- solve merge conflicts 
+- (delete stash)
+
+@olend
+
+
+---
+
+### Hands on 5: Merge conflicts
+
+---
+
+# mit GitHub arbeiten
+
+
+---
+
+### Issues
+
+@ul
+
+- issues: Todos / Bugs / Ideen
+- jeder issue hat eine Nummer
+- #issueno in commit message verknüpft commit mit issue
+
+@ulend
+
+---
+
+### Hands On 4: Issue
+
+@ol
+
+- Mona: Issue erstellen: "Grace's LieblingsGIF fehlt"
+- Grace: füge der Präsentation eine neue Folie hinzu mit deinem Lieblingsgif (giphy -> copy link)
+- Grace: add + commit. verlinke issue Nummer in der commit message (#issueno)
+- Grace: push
+- Mona: Issue neu laden (STRG+R)
+
+@olend
+
+---
+
+# Branches
+
+---
+
+
+[picture of complicated gitkraken with a lot of branches]
+
+---
+
+![Come on](https://media.giphy.com/media/HfFccPJv7a9k4/giphy.gif)
+
+---
+
+
+### Branches
+
+@box[bg-blue text-black rounded](Branch#A branch represents an independent line of development. Branches serve as an abstraction for the edit/stage/commit process. You can think of them as a way to request a brand new working directory, staging area, and project history. [Source](https://www.atlassian.com/git/tutorials/using-branches))
+
+---
+
+### Branches
+
+@box[bg-blue text-black rounded](Checkout#The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. Think of it as a way to select which line of development you’re working on. [Source](https://www.atlassian.com/git/tutorials/using-branches/git-checkout))
+
+---
+
+### Why branches?
+
+@ul
+
+- "master" branch frei von unfertigem Code halten
+- unabhängige Entwicklung von Code ("feature branches")
+- Experimente
+
+@ulend
+
+---
+
+### Branches Workflow
+
+@ol
+
+- Branch erstellen
+- normal weiterarbeiten (pull-commit-push cycles)
+- (optional: merge andere branches in deinen branch um Updates zu bekommen)
+- merge Branch in master branch 
+
+@olend
+
+---
+
+### Merging branches
+
+- Rechtsclick auf branch name / master
+- hängt davon ab, wer "weiter vorne" ist (?)
+    - wenn neue commits auf master: merge master into #1-add-branch-slides -> branch wird geupdatet
+    - wenn neue commits auf branch: merge #1-add-branch-slides into master -> master wird geupdatet
+
+
+
+---
+
+### Branches Fazit
+
+@ul
+
+- besonders nützlich bei Kollaboration
+- Entwicklung von Packages 
+- Relevanz für Datenprojekte (?)
+
+@ulend
+
+---
+
+# Das wars. 
+
+### gerne den Tag über fragen! 
