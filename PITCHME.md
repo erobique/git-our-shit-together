@@ -1,11 +1,11 @@
-# Git Workshop - Let's git our shit together!
+﻿# Git Workshop - Let's git our shit together!
 
 --- 
 
 ### Installation und Accounterstellung
 - siehe `README` des Repositories
 - `www.github.com/friep/git-our-shit-together`
-
+- Ändere erste Seite
 
 ---
 
